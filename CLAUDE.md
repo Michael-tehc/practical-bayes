@@ -10,16 +10,11 @@ Course materials for "Practical Bayesian Methods" (Прикладные байе
 - `seminars/` — Jupyter notebooks (PyMC) used live in class, with worked solutions under `seminars/solved/`.
 - `ha/` — homework notebooks (`ha-N.ipynb`) plus their data files.
 
-## Version control: jj, not git
+## Version control: git
 
-This repo is driven with **[Jujutsu](https://jj-vcs.github.io/jj/) (`jj`)** on top of a colocated git repo. Use `jj` commands, not `git`:
+Plain **git**. `main` tracks `origin/main` (`git@github.com:ferrine/practical-bayes.git`); other branches are `master` and `year-2025`.
 
-- `jj st` — working-copy status; `jj diff` — current changes.
-- `jj describe -m "..."` — set the current change's message; `jj new` — start a new change.
-- `jj bookmark list` — branches (here: `main`, `master`, `year-2025`).
-- `jj log` — history.
-
-The working copy is always a real commit (`@`); there is no staging step. Don't run `git commit`/`git add`.
+Note the repo tracks the **built lecture PDFs** (`lectures/*.pdf`) alongside their `.tex` sources — regenerate and commit them when a deck changes (see the build section below). LaTeX intermediates (`.aux`, `.log`, `.nav`, …) and the conda/editor noise are covered by `.gitignore`.
 
 ## Lectures: the bilingual convention
 
